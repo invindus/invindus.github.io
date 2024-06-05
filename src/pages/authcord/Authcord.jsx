@@ -1,6 +1,9 @@
 import React from 'react'
 import './Authcord.css'
 
+import IconButton from '@mui/material/IconButton';
+import { Box, Icon, Toolbar } from '@mui/material';
+
 const Authcord = () => {
   return (
     <div className='page-2'>
@@ -9,7 +12,9 @@ const Authcord = () => {
 
         <div className='title-buttons'>
           <h1>AUTHCORD</h1>
-          <button className='gh-icon' />
+          <IconButton className='gh-iconbutton' component='a' href='https://github.com/invindus/Authcord' target='_blank'>
+            <img src='/github.svg' alt='Github Icon'/>
+          </IconButton>
         </div>
         <p>Distributed Social Networking</p>
       </div>
@@ -60,20 +65,34 @@ const Authcord = () => {
 
       </div>
 
-        <div className='macbook'>
-          <img src='/macbook.png' alt="Macbook Air M2 Mockup" />
-        </div>
+      <Box className='tech-icons'>
+        <img src='/react.svg' alt='React Icon'/>
+        <img src='/django.svg' alt='Django Icon'/>
+        <img src='/heroku.svg' alt='Heroku Icon'/>
+        <img src='/postgres.svg' alt='PostgreSQL Icon'/>
+      </Box>
 
-        <div className='figma'>
+      <div className='macbook'>
+        <img src='/macbook.png' alt="Macbook Air M2 Mockup" />
+      </div>
+
+      <div className='figma'>
+
+        <div className='figma-icon-desc'>
+          <IconButton className='figma-iconbutton' component='a' href='https://www.figma.com/design/YQ3Ej9ATORi2AmeX9LBZjF/CMPUT404-PROJECT-UI?node-id=0-1&t=pYIUqnKHWOquXG7R-1' target='_blank'>
+            <img src="/figma.svg" alt="Figma Icon" />
+          </IconButton>
+          
           <div className='figma_desc'>
             <h2>DESIGNED</h2>
             <p>with Figma</p>
-          </div>
-
-          <div className='figma_img'>
-            <img src='/figma_temp.png' alt="" />
-          </div>
+          </div>        
         </div>
+
+        <div className='figma_img'>
+          <img src='/figma_temp.png' alt="" />
+        </div>
+      </div>
         
     </div>
   )
