@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react'
 import './App.css'
+import Title from './pages/title/Title'
+import Authcord from './pages/authcord/Authcord';
 
 function App() {
   
@@ -23,53 +25,19 @@ function App() {
 
   return (
     <>
-      <div className='page-1'>
-
-        <div className='title'>
-          <h1>Hey, <br/>I'm Sam</h1> 
-            
-          {/* Show icons to the right of I'm Sam if large screen */}
-          {!isMobile && (
-            <div className='profile'> 
-              <div className='profile-icons'>
-                <button className='gh-icon'> </button>
-                <button className='ig-icon'> </button>
-                <button className='ln-icon'> </button>
-              </div>
-
-              <div className='profile-desc'> 
-                <h2> - student, developer,</h2>
-                <h2> photographer.</h2>
-              </div>
-            </div>
-          )}
-
-        </div>
-
-        {/* Show icons below I'm Sam if mobile screen */}
-        {isMobile && (
-          <div className='profile-mobile'>
-            <div className='profile-icons-mobile'>
-              <button className='gh-icon'> </button>
-              <button className='ig-icon'> </button>
-              <button className='ln-icon'> </button>
-            </div>
-            
-            <div className='profile-desc'> 
-              <h2> - student, developer,</h2>
-              <h2> photographer.</h2>
-            </div>
-          </div>
-        )}
-
-        
-
+      <div className='header'>
+        <h2>about</h2>
+        <h2>contact</h2>
       </div>
-      {/* END PAGE 1 */}
 
-      <div className='page-2'>
+      <Title isMobile={isMobile}/>
+
+      <Authcord/>
+
+
+      <div className='footer'>
         <h2>In progress...</h2>
-
+        <p>&copy; 2024</p>
       </div>
     </>
   )
