@@ -28,10 +28,9 @@ function App() {
 
       <div className='in-progress'>
         <h2>In progress...</h2>
-        <p>&copy; 2024</p>
       </div>
       <footer class="footer">
-        © {new Date().getFullYear()} Samuel Chan
+        &copy; {new Date().getFullYear()} Samuel Chan
       </footer>
     </>
   )
