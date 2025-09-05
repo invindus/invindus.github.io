@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react'
 import './App.css'
-import Title from './pages/title/Title'
-import Authcord from './pages/authcord/Authcord';
+import Home from './pages/Home/Home';
 
 function App() {
   
@@ -25,20 +24,15 @@ function App() {
 
   return (
     <>
-      <div className='header'>
-        <h2>about</h2>
-        <h2>contact</h2>
-      </div>
+      <Home/>
 
-      <Title isMobile={isMobile}/>
-
-      <Authcord/>
-
-
-      <div className='footer'>
+      <div className='in-progress'>
         <h2>In progress...</h2>
         <p>&copy; 2024</p>
       </div>
+      <footer class="footer">
+        © {new Date().getFullYear()} Samuel Chan
+      </footer>
     </>
   )
 }
