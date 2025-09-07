@@ -1,6 +1,10 @@
 import { useState, useEffect } from 'react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import './App.css'
 import Home from './pages/Home/Home';
+import About from './pages/About/About';
+import Development from './pages/Development/Development';
+import Photography from './pages/Photography/Photography';
 
 function App() {
   
@@ -23,16 +27,25 @@ function App() {
 
 
   return (
-    <>
-      <Home/>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/dev" element={<Development />} />
+        <Route path="/photos" element={<Photography />} />
 
-      <div className='in-progress'>
-        <h2>In progress...</h2>
-      </div>
-      <footer class="footer">
-        &copy; {new Date().getFullYear()} Samuel Chan
-      </footer>
-    </>
+      </Routes>
+    </Router>
+    // <>
+    //   <Home/>
+
+    //   <div className='in-progress'>
+    //     <h2>In progress...</h2>
+    //   </div>
+    //   <footer class="footer">
+    //     &copy; {new Date().getFullYear()} Samuel Chan
+    //   </footer>
+    // </>
   )
 }
 
